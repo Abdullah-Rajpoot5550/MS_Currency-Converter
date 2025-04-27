@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.social-share {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-share img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-share img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.contact {
+    text-align: center;
+    padding: 30px;
+}
+
+.contact input,
+.contact textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px 15px;
+    background-color: #0065ea;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background-color: #0055c4;
+}
+
+.faq {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.faq details {
+    margin: 10px;
+    cursor: pointer;
+}
+
+#contact-message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.business-info {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-details {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+.contact input, .contact textarea{
+    color: black;
+}
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9900;
+}
+/* body {
+    font-family: Arial, sans-serif;
+    background: #222;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+} */
+
+.converter-container {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: auto;
+}
+
+.currency-selection, .amount-input {
+    margin: 10px 0;
+}
+
+select, input {
+    padding: 8px;
+    width: 100%;
+}
+
+button {
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffaa00;
+}
+
+#pinnedList {
+    list-style: none;
+    padding: 0;
+}
+
+#pinnedList li {
+    background: #444;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background: darkred;
+}

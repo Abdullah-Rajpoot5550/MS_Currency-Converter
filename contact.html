@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MS Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- <script defer src="theme.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="padding: 0px;" class="bg-black text-white">
+    <header class="bg-black border-b border-gray-700">
+        <!-- <img src="assets/hero-image.jpg" loading="lazy" alt="Currency Converter"> -->
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+            <a href="converter.html" class="text-2xl font-bold text-white logo ">
+                <img src="Logo.png" width="150" style="margin: -25px; margin-left: -50px;">
+                MS Currency Converter
+            </a>
+
+            <!-- Navigation (Desktop) -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-gray-400 transition">Home</a>
+                <a href="converter.html" class="hover:text-gray-400 transition">Conversion</a>
+                <a href="history.html" class="hover:text-gray-400 transition">History</a>
+                <a href="contact.html" class="hover:text-gray-400 transition">Contact</a>
+                <div class="menu-toggle">&#9776;</div>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 text-white hover:text-gray-400">Home</a>
+            <a href="converter.html" class="block py-2 text-white hover:text-gray-400">Conversion</a>
+            <a href="history.html" class="block py-2 text-white hover:text-gray-400">History</a>
+            <a href="contact.html" class="block py-2 text-white hover:text-gray-400">Contact</a>
+        </div>
+    </header>
+    <script>
+        // Toggle Mobile Menu
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need help? Send us a message!</p>
+
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" >Send Message</button>
+            <p id="contact-message"></p>
+        </form>
+    </section>
+
+    <section class="faq">
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <details>
+            <summary>How do I convert currencies?</summary>
+            <p>Simply enter the amount, select the currencies, and click "Convert".</p>
+        </details>
+        <details>
+            <summary>Is this service free?</summary>
+            <p>Yes! Our currency converter is completely free to use.</p>
+        </details>
+    </section>
+    <section class="business-info bg-gray-900 p-6 rounded-lg max-w-lg mx-auto shadow-lg">
+        <h3>Our Location</h3>
+        <p>Visit us at our office or contact us for any queries.</p>
+    
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.384594559208!2d73.19508860896401!3d33.49136964703062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dff16f1be5b4d7%3A0xd2724b0b85ca3ae4!2sRawat%20Technology%20Park!5e0!3m2!1sen!2s!4v1742103188206!5m2!1sen!2s" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    
+        <div class="contact-details">
+            <p><strong>Email:</strong> rajpootabdullah5550@gmail.com</p>
+            <p><strong>Phone:</strong> 0317-7865550</p>
+            <p><strong>Address:</strong> F5QW+GHH, Rawat, 45900, Pakistan</p>
+        </div>
+    </section>
+    
+
+     <!-- Footer -->
+
+     <footer class="bg-black text-white py-10">
+        <div class="container mx-auto px-6">
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+
+                <!-- Brand & About -->
+                <div>
+                    <h3 class="text-2xl font-bold">MS Currency Converter</h3>
+                    <p class="text-gray-400 mt-2">Reliable and real-time currency conversions at your fingertips.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+                    <ul class="space-y-2">
+
+
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="converter.html" class="text-gray-400 hover:text-white">Converter</a></li>
+                        <li><a href="history.html" class="text-gray-400 hover:text-white">History</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social Media -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Contact Us</h3>
+                    <p class="text-gray-400">Email: rajpootabdullah5550@gmail.com</p>
+                    <p class="text-gray-400">Phone: 0317-7865550</p>
+
+                    <!-- Social Media Links -->
+                    <div class="flex justify-center md:justify-start mt-4 space-x-4">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-8 text-center border-t border-gray-700 pt-4 text-gray-500">
+                <p>&copy; 2025 MS Currency Converter. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

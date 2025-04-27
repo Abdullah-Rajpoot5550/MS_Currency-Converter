@@ -1,0 +1,584 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo a {
+    color: #00d1b2;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00d1b2;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+/* Mobile Responsive */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+       
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #0065ea;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #024aa8;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    background: #222;
+    color: white;
+}
+
+.feature-box {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.feature-box h3 {
+    color: #00d1b2;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Converter Section */
+.converter {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+.converter-box {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+button {
+    background: #00d1b2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #008f7a;
+}
+
+p#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* History Section */
+.history {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#historyList li {
+    background: #222;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#clearHistory {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#clearHistory:hover {
+    background: darkred;
+}
+
+/* Favorites Section */
+.favorites {
+    text-align: center;
+    padding: 20px;
+}
+
+#favoriteList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.favorite-item {
+    background: #1b2937;
+    border: 1px solid lightskyblue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.favorite-item:hover {
+    background: #00d1b2;
+}
+
+/* Default Dark Mode */
+body {
+    background-color: #121212;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+.light-mode {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Make the site responsive */
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #222;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    /* Converter Section */
+    .converter-box {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Favorites Section */
+    .favorites {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 1rem;
+    }
+}
+
+/* Buttons - Smooth Hover Effect */
+button {
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #0067e9;
+    color: white;
+}
+
+/* Input Fields - Interactive Focus */
+input,
+select {
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #ff9800;
+    box-shadow: 0px 0px 8px rgba(255, 152, 0, 0.5);
+}
+
+/* Card Styling for Sections */
+.converter-box {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.converter-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Loading Animation */
+.loading {
+    display: none;
+    margin: 10px auto;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ff9800;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fix for Safari flexbox issues */
+@supports (-webkit-appearance: none) {
+    .converter-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* General Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply to sections */
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Smooth Button Hover Effects */
+button {
+    transition: all 0.3s ease;
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5);
+}
+
+/* Currency Converter Slide Animation */
+.currency-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.currency-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact Page - Form Input Focus Animation */
+input, textarea {
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+input:focus, textarea:focus {
+    border-bottom: 2px solid #ffcc00;
+    transform: scale(1.02);
+}
+
+/* Conversion History Slide-in */
+.history-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.history-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Dark Mode Toggle Effect */
+.dark-mode-toggle {
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: rotate(20deg);
+}
+/* General Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply to sections */
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Smooth Button Hover Effects */
+button {
+    transition: all 0.3s ease;
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5);
+}
+
+/* Currency Converter Slide Animation */
+.currency-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.currency-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact Page - Form Input Focus Animation */
+input, textarea {
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+input:focus, textarea:focus {
+    border-bottom: 2px solid #ffcc00;
+    transform: scale(1.02);
+}
+
+/* Conversion History Slide-in */
+.history-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.history-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Dark Mode Toggle Effect */
+.dark-mode-toggle {
+    transition: transform 0.4s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: rotate(20deg);
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .currency-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    .history-item {
+        font-size: 14px;
+    }
+    #menu-btn {
+        width: 7%;
+    }
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    /* width: 50px;
+    height: 50px; */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+/* respnsive for mobile */
+
